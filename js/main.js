@@ -63,7 +63,9 @@
 
       /* Demo mode: no endpoint configured yet. */
       if (!endpoint) {
-        ok("You're on the list! 🦚 (Demo mode — add your Formspree endpoint in js/config.js to collect for real.)");
+        ok(kind === "Question"
+          ? "Got it! 🦚 (Demo mode — add your Formspree endpoint in js/config.js to receive real messages.)"
+          : "You're on the list! 🦚 (Demo mode — add your Formspree endpoint in js/config.js to collect for real.)");
         return;
       }
 
@@ -81,9 +83,10 @@
       })
         .then(function (res) {
           if (res.ok) {
-            ok(kind === "Pack reservation"
-              ? "Reserved! 🦚 We'll email you the moment checkout opens."
-              : "You're in the club! 🦚 Watch your inbox.");
+            var successText = "You're in the club! 🦚 Watch your inbox.";
+            if (kind === "Pack reservation") successText = "Reserved! 🦚 We'll email you the moment checkout opens.";
+            if (kind === "Question") successText = "Got it! 🦚 A real human will reply within a day or two.";
+            ok(successText);
           } else {
             fail("Hmm, that didn't go through. Mind trying again?");
           }

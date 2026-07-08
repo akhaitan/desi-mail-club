@@ -501,6 +501,34 @@ details p { margin: 0; padding: 0 1.25rem 1.15rem; color: var(--ink-soft); }
   .join-form input { flex: 1; }
 }
 
+/* ---------- Contact ---------- */
+.contact-form {
+  display: grid;
+  gap: 0.7rem;
+  max-width: 480px;
+  margin: 1.6rem auto 0;
+  text-align: left;
+}
+.contact-form input {
+  font: inherit;
+  padding: 0.85rem 1.1rem;
+  border: 2px solid var(--line);
+  border-radius: 99px;
+  background: #fff;
+  width: 100%;
+}
+.contact-form textarea {
+  font: inherit;
+  padding: 0.85rem 1.1rem;
+  border: 2px solid var(--line);
+  border-radius: 1.2rem;
+  background: #fff;
+  width: 100%;
+  resize: vertical;
+}
+.contact-form input:focus, .contact-form textarea:focus { border-color: var(--peacock); outline: none; }
+.contact-alt { color: var(--ink-soft); font-size: 0.9rem; margin-top: 1rem; }
+
 /* ---------- Footer ---------- */
 .footer { margin-top: 1rem; }
 .footer-inner { padding: 2.2rem 0 2.6rem; text-align: center; }
