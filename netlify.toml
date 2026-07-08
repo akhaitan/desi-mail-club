@@ -12,7 +12,7 @@
     X-Frame-Options = "DENY"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://*.goatcounter.com; connect-src 'self' https://formspree.io https://*.goatcounter.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://formspree.io"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' https://gc.zgo.at https://www.clarity.ms https://*.clarity.ms; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://*.goatcounter.com; connect-src 'self' https://formspree.io https://*.goatcounter.com https://www.clarity.ms https://*.clarity.ms; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://formspree.io"
 
 # Order statuses must go stale fast — owner updates them by hand
 [[headers]]

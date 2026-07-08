@@ -35,4 +35,12 @@ window.DMC_CONFIG = {
         Dashboard lives at https://YOURCODE.goatcounter.com.
         While this is empty, no analytics script loads at all. */
   goatCounterCode: "desimailclub",
+
+  /* 6) CLICK/SESSION ANALYTICS — free, gives heatmaps + session
+        recordings so you can see what people actually click on.
+        Sign up at https://clarity.microsoft.com, create a project
+        for this site, and paste the Project ID here (10-character
+        code from Settings > Setup, e.g. "abc123defg").
+        While this is empty, no Clarity script loads at all. */
+  clarityProjectId: "xj9jtcvuff",
 };

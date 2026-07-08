@@ -30,6 +30,10 @@ personalized with the child's first name — that's the hero selling point.
     collect shipping address + a custom "Child's first name" field.
   - `formspreeEndpoint` — empty = forms run in demo mode.
   - `goatCounterCode` — empty = no analytics script loads at all.
+  - `clarityProjectId` — Microsoft Clarity (heatmaps + session recordings,
+    for seeing what visitors actually click). Empty = no script loads.
+    Clarity sets its own cookies, unlike GoatCounter — add a consent
+    banner before enabling it if EU/UK traffic becomes meaningful.
   - price, deadline banner toggle/dates.
 - Order tracking with no backend: `data/orders.js` maps order numbers
   (`DMC-0001` style) → `{ stage: 1–4, mailedOn?, note? }`. Stages: received →
