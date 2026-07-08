@@ -319,33 +319,34 @@ a:hover { color: var(--saffron-deep); }
   .feature-art { margin-inline: 0; }
 }
 
-.items-grid {
+.inside-row { text-align: center; margin-top: 0.6rem; }
+.inside-row-label {
+  font-family: var(--font-accent);
+  font-weight: 700;
+  color: var(--ink-soft);
+  margin-bottom: 0.9rem;
+}
+.pill-row {
   list-style: none;
   padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 1.1rem;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem;
+  max-width: 720px;
 }
-.item-card {
+.pill {
   background: #fff;
   border: 1.5px solid var(--line);
-  border-radius: var(--radius);
-  padding: 1.5rem 1.4rem;
+  border-radius: 99px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  font-size: 0.97rem;
   box-shadow: 0 4px 14px rgba(51, 48, 43, 0.05);
+  white-space: nowrap;
 }
-.item-card h3 { font-size: 1.08rem; margin: 0.9rem 0 0.4rem; }
-.item-card p { margin: 0; color: var(--ink-soft); font-size: 0.97rem; }
-.item-icon { width: 52px; height: 52px; }
-.item-card-cta {
-  background: var(--peacock-tint);
-  border-color: transparent;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.item-card-cta .btn { margin-top: 1rem; }
-@media (min-width: 640px) { .items-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 980px) { .items-grid { grid-template-columns: repeat(4, 1fr); } }
+.inside-row-note { max-width: 480px; margin: 1.2rem auto 1.3rem; color: var(--ink-soft); }
 
 /* ---------- How it works ---------- */
 .steps {

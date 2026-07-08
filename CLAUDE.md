@@ -18,8 +18,12 @@ personalized with the child's first name — that's the hero selling point.
   Promise" (no-fuss full refund), honest FAQ, **honest urgency only** — the
   order-by-Aug-1 deadline is real (mail transit for Aug 15). No fake scarcity,
   ever.
-- Pack contents are real and locked (see index.html "What's inside") — don't
-  invent new items.
+- Pack contents are real (see index.html "What's inside"). The personalized
+  letter is the one specifically-named item — everything else is shown as a
+  single row of broad categories (informational cards, stickers, bookmark,
+  coloring page) on purpose, so the owner can change specific items last
+  minute without touching marketing copy. Don't re-itemize this section or
+  invent new items/categories without asking.
 
 ## Tech decisions (deliberate — don't change without asking)
 
