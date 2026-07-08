@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(unzip -l /Users/abhinavkhaitan/code/claude_vibe/desi-mail-club/desi-mail-club.zip)",
+      "Bash(unzip -o desi-mail-club.zip -d /private/tmp/claude-501/-Users-abhinavkhaitan-code-claude-vibe-desi-mail-club/39fa0012-d42b-417d-9568-6b1b84c75f51/scratchpad/unzipped)",
+      "Bash(rsync -a /private/tmp/claude-501/-Users-abhinavkhaitan-code-claude-vibe-desi-mail-club/39fa0012-d42b-417d-9568-6b1b84c75f51/scratchpad/unzipped/desi-mail-club/ .)",
+      "Read(//Users/abhinavkhaitan/**)",
+      "Read(//Users/abhinavkhaitan/.config/**)",
+      "Read(//Users/abhinavkhaitan/Library/Preferences/**)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit -q -m 'Desi Mail Club — Azadi Edition landing site *)"
+    ]
+  }
+}

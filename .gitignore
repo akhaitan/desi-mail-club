@@ -1,0 +1,16 @@
+# Local working files — never publish (this repo is public for GitHub Pages)
+context.txt
+desi-mail-club.zip
+preview-*.html
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Deploy tool state
+.vercel/
+.netlify/

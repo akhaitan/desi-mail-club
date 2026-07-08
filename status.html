@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Track my mail — Desi Mail Club</title>
+  <meta name="description" content="Follow your Desi Mail Club envelope's journey — from Moru's packing table to your mailbox." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Baloo+2:wght@600;700&family=Mulish:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <a class="brand" href="index.html" aria-label="Desi Mail Club home">
+      <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+        <rect x="6" y="14" width="36" height="24" rx="4" fill="#FFFDF8" stroke="#33302B" stroke-width="2.5"/>
+        <path d="M6 17 L24 31 L42 17" fill="none" stroke="#33302B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="36" cy="12" r="8" fill="#12808F"/>
+        <path d="M33 12 q3 -3 6 0" stroke="#FFFDF8" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+        <circle cx="36" cy="5" r="1.6" fill="#F0862F"/>
+        <line x1="36" y1="6.5" x2="36" y2="9" stroke="#F0862F" stroke-width="1.4"/>
+      </svg>
+      <span class="brand-name">Desi&nbsp;Mail&nbsp;Club</span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="index.html#inside">What's inside</a>
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-sm btn-primary" href="index.html#join">Get the pack</a>
+  </header>
+
+  <main>
+    <section class="status-hero">
+      <div class="container container-narrow">
+        <p class="eyebrow">Track my mail</p>
+        <h1>Where's my envelope?</h1>
+        <p class="section-lede center" style="margin-inline:auto;">Snail mail doesn't come with a tracking number — that's part of the charm. Instead, we update every order's journey <em>by hand</em> at each step. Enter your order number (it's in your confirmation email, like <strong>DMC-0042</strong>).</p>
+        <form class="status-form" id="status-form">
+          <label class="visually-hidden" for="order-input">Order number</label>
+          <input id="order-input" type="text" name="order" placeholder="DMC-0042" autocomplete="off" required />
+          <button class="btn btn-primary" type="submit">Find my mail</button>
+        </form>
+        <p class="form-msg" id="status-msg" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="container" id="tracker-wrap" hidden>
+      <div class="tracker-card">
+        <p class="tracker-order" id="tracker-order"></p>
+        <ol class="tracker" id="tracker"></ol>
+        <p class="tracker-note" id="tracker-note" hidden></p>
+      </div>
+    </section>
+
+    <div class="status-help container">
+      <p>Can't find your order number, or has it been more than 10 days? Write to <a href="mailto:hello@desimailclub.com">hello@desimailclub.com</a> — the Moru Promise covers the journey too: if it never shows up, we'll mail a fresh pack or refund you, your choice.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="airmail" aria-hidden="true"></div>
+    <div class="container footer-inner">
+      <p class="footer-brand">Desi Mail Club <span aria-hidden="true">🦚✉️</span></p>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="index.html#inside">What's inside</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="mailto:hello@desimailclub.com">hello@desimailclub.com</a>
+      </nav>
+      <p class="footer-note">Made with love &amp; ladoos · © 2026 Desi Mail Club</p>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="data/orders.js"></script>
+  <script src="js/status.js"></script>
+</body>
+</html>
