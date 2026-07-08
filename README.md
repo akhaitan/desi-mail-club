@@ -31,31 +31,32 @@ cd desi-mail-club
 npx serve .        # or: python3 -m http.server 8000
 ```
 
-## Go-live checklist (~15 minutes)
+## Live services (all connected as of July 2026)
 
-1. **Email capture** — create a free form at [formspree.io](https://formspree.io),
-   copy the endpoint URL (`https://formspree.io/f/xxxxxxx`) into
-   `formspreeEndpoint` in `js/config.js`. Both the club-list form and the
-   reserve modal will start delivering to your inbox.
+Everything is wired through `js/config.js` — one field per service:
 
-2. **Payments (when ready)** — in the [Stripe dashboard](https://dashboard.stripe.com/payment-links),
-   create a Payment Link:
-   - Product: *Desi Mail Club — Azadi Edition*, $19
-   - Turn on **Collect shipping address**
-   - Add a **custom field**: "Child's first name" (this powers the personalization!)
+1. **Payments — LIVE.** Buy buttons go to a Stripe Payment Link
+   (`buy.stripe.com/00w6oHgQs22Id6t8NJbZe00`) that collects payment,
+   a US shipping address, and a required **"Child's first name"** custom
+   field (powers the letter personalization). Manage it in the
+   [Stripe dashboard](https://dashboard.stripe.com/payment-links)
+   (account: Desi Mail Club). For a future edition (Diwali, Holi), create
+   a new product + Payment Link and swap `stripePaymentLink`. To pause
+   sales, deactivate the link in Stripe — buy buttons then fall back to
+   the "reserve your pack" email modal only if you also blank the config
+   field.
 
-   Paste the link into `stripePaymentLink` in `js/config.js`. Every buy button
-   on the site instantly switches from "reserve" mode to real checkout.
-   Nothing else to change.
+2. **Email capture — LIVE.** Club-list form and reserve modal deliver via
+   Formspree (`formspree.io/f/xkolavgg`). Free tier caps at
+   50 submissions/month — upgrade if reservation volume grows.
 
-3. **Deadline banner** — dates live in `js/config.js`. After Independence Day,
-   set `showDeadlineBanner: false` to sell the pack evergreen.
+3. **Analytics — LIVE.** GoatCounter (cookie-free, no consent banner).
+   Dashboard: https://desimailclub.goatcounter.com. The loader
+   (`js/analytics.js`) skips localhost and file:// previews, so local
+   testing never pollutes the stats.
 
-4. **Analytics** — sign up free at [goatcounter.com](https://www.goatcounter.com)
-   (cookie-free, no consent banner needed), pick a site code like
-   `desimailclub`, and paste it into `goatCounterCode` in `js/config.js`.
-   Your dashboard: `https://YOURCODE.goatcounter.com`. Until then, no
-   analytics script loads at all.
+4. **Deadline banner** — dates live in `js/config.js`. After Independence
+   Day, set `showDeadlineBanner: false` to sell the pack evergreen.
 
 ## Order status workflow (no backend needed)
 

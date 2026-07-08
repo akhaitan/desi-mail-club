@@ -47,6 +47,28 @@ personalized with the child's first name — that's the hero selling point.
   swapping with commissioned art. Mobile-first, reduced-motion respected,
   keyboard focus visible — keep it that way.
 
+## Go-live status (2026-07-08: fully live)
+
+All three `js/config.js` switches are set and deployed:
+
+- **Stripe** (live mode, account `acct_1TqnIxHrIxx7sxmI` "Desi Mail Club",
+  activated — charges + payouts enabled, statement descriptor DESI MAIL
+  CLUB): product `prod_UqUOCif6JzEV1W`, price `price_1TqnPdHrIxx7sxmIIafDCFs3`
+  ($19 one-time), payment link `plink_1TqnPzHrIxx7sxmIjfPW84ml` →
+  https://buy.stripe.com/00w6oHgQs22Id6t8NJbZe00. US-only shipping address
+  collection, required custom field "Child's first name (for Moru's letter)"
+  (max 30 chars), Moru-voiced hosted confirmation, dynamic payment methods.
+  Quantity fixed at 1 on purpose: one order = one child's name. The Stripe
+  MCP server (mcp.stripe.com) + official Stripe plugin are configured for
+  this project and authenticated to this account in **live mode**.
+  NOTE: no real end-to-end purchase has been tested yet (a live
+  buy-and-refund or a test-mode twin link are the options).
+- **Formspree**: `https://formspree.io/f/xkolavgg` — free tier,
+  50 submissions/month cap.
+- **GoatCounter**: code `desimailclub`, dashboard
+  https://desimailclub.goatcounter.com. Loader in `js/analytics.js` skips
+  localhost/file:// so local previews don't pollute stats.
+
 ## Production setup (July 2026)
 
 - **Live at**: https://akhaitan.github.io/desi-mail-club/ (GitHub Pages,
