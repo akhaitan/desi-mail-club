@@ -71,8 +71,15 @@ All three `js/config.js` switches are set and deployed:
 
 ## Production setup (July 2026)
 
-- **Live at**: https://akhaitan.github.io/desi-mail-club/ (GitHub Pages,
-  deploy-from-branch `main`, root). Push to `main` = deploy in ~1 minute.
+- **Live at**: https://desimailclub.com/ (custom domain, purchased
+  2026-07-08). Served via GitHub Pages, deploy-from-branch `main`, root, with
+  a `CNAME` file in the repo root pinning the domain. DNS: apex `A` records
+  to GitHub's four Pages IPs (185.199.108/109/110/111.153) + `www` `CNAME` to
+  `akhaitan.github.io`, "Enforce HTTPS" on. Push to `main` = deploy in ~1
+  minute. The old `https://akhaitan.github.io/desi-mail-club/` URL still
+  resolves (GitHub Pages keeps serving both) but all canonical/OG/sitemap
+  URLs in the repo now point at desimailclub.com — don't reintroduce the old
+  host when editing these files.
 - Repo: https://github.com/akhaitan/desi-mail-club (public — required for
   Pages on the free plan). An earlier note referenced a "desi-mall-club"
   remote; that was a typo, the real repo uses "mail".
@@ -82,12 +89,10 @@ All three `js/config.js` switches are set and deployed:
 - SEO surface: canonical + OG/Twitter meta and JSON-LD Product schema in
   `index.html`, `sitemap.xml`, `robots.txt`, `404.html` (Moru-voiced,
   absolute URLs), `assets/og-card.png` (1200×630 social card),
-  `assets/apple-touch-icon.png`.
-- **Custom domain checklist** (when desimailclub.com is purchased): add CNAME
-  in repo settings / Pages config, then swap the URL prefix in `index.html`
-  (canonical + og + JSON-LD), `status.html`, `404.html` (all absolute URLs),
-  `sitemap.xml`, `robots.txt`.
+  `assets/apple-touch-icon.png`. All reference desimailclub.com at root
+  (no `/desi-mail-club/` path prefix — that was GitHub Pages project-site
+  scoping, not needed on the custom domain).
 - Analytics: GoatCounter via `js/analytics.js`, config-driven, cookie-free
-  (no consent banner needed). Dashboard: https://CODE.goatcounter.com.
+  (no consent banner needed). Dashboard: https://desimailclub.goatcounter.com.
 - Local files `context.txt`, `preview-*.html`, `desi-mail-club.zip` are
   gitignored on purpose — never commit them (public repo).

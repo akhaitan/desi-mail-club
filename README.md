@@ -79,18 +79,17 @@ never names, emails, or addresses — so it's safe to serve publicly.
 
 ## Deploy
 
-**Live now on GitHub Pages**: https://akhaitan.github.io/desi-mail-club/
-— every push to `main` redeploys in about a minute. Updating an order
-status is just an edit + push.
+**Live now at https://desimailclub.com/** — served by GitHub Pages
+(deploy-from-branch `main`, root), with the custom domain pinned via the
+`CNAME` file in the repo root. DNS: apex `A` records to GitHub's four Pages
+IPs, `www` `CNAME` to `akhaitan.github.io`, HTTPS enforced. Every push to
+`main` redeploys in about a minute. Updating an order status is just an
+edit + push.
 
 If you ever want to switch hosts, `netlify.toml` and `vercel.json` are
 already configured (they also add security + caching headers, which GitHub
 Pages can't do): connect the GitHub repo on Netlify/Vercel and it deploys
 with no build step.
-
-**Custom domain later**: point desimailclub.com at Pages in the repo
-settings, then swap the URL prefix in `index.html`, `status.html`,
-`404.html`, `sitemap.xml`, and `robots.txt` (grep for `akhaitan.github.io`).
 
 ## Swapping in commissioned art later
 

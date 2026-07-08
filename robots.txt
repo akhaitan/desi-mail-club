@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://akhaitan.github.io/desi-mail-club/sitemap.xml
+Sitemap: https://desimailclub.com/sitemap.xml
