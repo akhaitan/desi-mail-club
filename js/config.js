@@ -34,5 +34,5 @@ window.DMC_CONFIG = {
         site code (e.g. "desimailclub"), and paste it here.
         Dashboard lives at https://YOURCODE.goatcounter.com.
         While this is empty, no analytics script loads at all. */
-  goatCounterCode: "",
+  goatCounterCode: "desimailclub",
 };
