@@ -14,3 +14,6 @@ Thumbs.db
 # Deploy tool state
 .vercel/
 .netlify/
+
+# Claude Code local settings (machine-specific)
+.claude/settings.local.json
