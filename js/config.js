@@ -10,7 +10,7 @@ window.DMC_CONFIG = {
         shipping address + add a custom field "Child's first name").
         While this is empty (""), the buy buttons open a
         "Reserve your pack" email form instead. */
-  stripePaymentLink: "",
+  stripePaymentLink: "https://buy.stripe.com/00w6oHgQs22Id6t8NJbZe00",
 
   /* 2) EMAIL CAPTURE — paste your Formspree endpoint here.
         Create a free form at https://formspree.io and copy the
