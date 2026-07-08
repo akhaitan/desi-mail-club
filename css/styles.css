@@ -302,51 +302,37 @@ a:hover { color: var(--saffron-deep); }
 .section .eyebrow + h2 { margin-top: 0; }
 
 /* ---------- What's inside ---------- */
-.feature-card {
-  display: grid;
-  gap: 1.5rem;
+.items-grid {
+  list-style: none;
+  padding: 0;
+  margin: 2.4rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.item-card {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
   background: #fff;
   border: 1.5px solid var(--line);
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: clamp(1.4rem, 4vw, 2.4rem);
-  margin: 2.4rem 0 1.4rem;
-}
-.feature-art { width: min(300px, 100%); margin-inline: auto; }
-.feature-copy h3 { font-size: clamp(1.3rem, 2.6vw, 1.7rem); }
-@media (min-width: 760px) {
-  .feature-card { grid-template-columns: 1fr 1.4fr; align-items: center; }
-  .feature-art { margin-inline: 0; }
-}
-
-.inside-row { text-align: center; margin-top: 0.6rem; }
-.inside-row-label {
-  font-family: var(--font-accent);
-  font-weight: 700;
-  color: var(--ink-soft);
-  margin-bottom: 0.9rem;
-}
-.pill-row {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.7rem;
-  max-width: 720px;
-}
-.pill {
-  background: #fff;
-  border: 1.5px solid var(--line);
-  border-radius: 99px;
-  padding: 0.6rem 1.2rem;
-  font-weight: 600;
-  font-size: 0.97rem;
+  padding: 1.2rem 1.5rem;
   box-shadow: 0 4px 14px rgba(51, 48, 43, 0.05);
-  white-space: nowrap;
 }
-.inside-row-note { max-width: 480px; margin: 1.2rem auto 1.3rem; color: var(--ink-soft); }
+.item-copy { flex: 1; }
+.item-copy h3 { font-size: 1.08rem; margin: 0 0 0.3rem; }
+.item-copy p { margin: 0; color: var(--ink-soft); font-size: 0.97rem; }
+.item-icon { width: 48px; height: 48px; flex-shrink: 0; }
+.item-card-cta {
+  background: var(--peacock-tint);
+  border-color: transparent;
+  flex-wrap: wrap;
+}
+.item-card-cta .btn { flex-shrink: 0; white-space: nowrap; margin-left: auto; }
+@media (max-width: 559px) {
+  .item-card-cta .btn { margin-left: 0; width: 100%; margin-top: 0.4rem; }
+}
 
 /* ---------- How it works ---------- */
 .steps {
@@ -471,21 +457,6 @@ summary::after {
 details[open] summary::after { rotate: 45deg; }
 details p { margin: 0; padding: 0 1.25rem 1.15rem; color: var(--ink-soft); }
 
-/* ---------- Join ---------- */
-.section-join {
-  background:
-    radial-gradient(40% 60% at 12% 20%, rgba(240, 134, 47, 0.10), transparent 70%),
-    radial-gradient(40% 60% at 88% 80%, rgba(18, 128, 143, 0.10), transparent 70%),
-    #FDF8EF;
-}
-.join-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-  max-width: 480px;
-  margin: 1.6rem auto 0;
-}
-.join-form input,
 .modal-form input {
   font: inherit;
   padding: 0.85rem 1.1rem;
@@ -494,13 +465,9 @@ details p { margin: 0; padding: 0 1.25rem 1.15rem; color: var(--ink-soft); }
   background: #fff;
   width: 100%;
 }
-.join-form input:focus, .modal-form input:focus { border-color: var(--peacock); outline: none; }
+.modal-form input:focus { border-color: var(--peacock); outline: none; }
 .form-msg { font-weight: 700; color: var(--green); min-height: 1.4em; margin-top: 0.8rem; }
 .form-msg.error { color: #C0392B; }
-@media (min-width: 560px) {
-  .join-form { flex-direction: row; }
-  .join-form input { flex: 1; }
-}
 
 /* ---------- Contact ---------- */
 .contact-form {

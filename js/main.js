@@ -38,7 +38,7 @@
         modal.showModal();
       });
     }
-    /* If <dialog> is unsupported, buttons keep their #join fallback href. */
+    /* If <dialog> is unsupported and Stripe isn't set, buttons keep their static href (the live Stripe link, hardcoded in markup as a no-JS fallback). */
   });
 
   /* ---------- Email forms (Formspree, with demo mode) ---------- */
