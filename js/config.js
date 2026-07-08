@@ -17,7 +17,7 @@ window.DMC_CONFIG = {
         URL that looks like: https://formspree.io/f/abcdwxyz
         While this is empty, forms run in demo mode (they show
         success but don't send anywhere). */
-  formspreeEndpoint: "",
+  formspreeEndpoint: "https://formspree.io/f/xkolavgg",
 
   /* 3) PRICE shown on buttons and the pricing card. */
   price: "$19",
