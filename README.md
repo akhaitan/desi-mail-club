@@ -13,8 +13,12 @@ desi-mail-club/
 ├── js/config.js      # ⭐ THE ONLY FILE YOU EDIT TO GO LIVE
 ├── js/main.js        # CTA logic, banner, forms, animations
 ├── js/status.js      # Order tracker logic
+├── js/analytics.js   # GoatCounter loader (only runs when configured)
 ├── data/orders.js    # ⭐ Order statuses — update by hand as you pack & mail
-└── assets/favicon.svg
+├── 404.html          # Moru-voiced not-found page
+├── sitemap.xml, robots.txt
+├── netlify.toml, vercel.json   # headers/caching if you ever switch hosts
+└── assets/           # favicon, social share card, touch icon
 ```
 
 ## Run it locally
@@ -47,6 +51,12 @@ npx serve .        # or: python3 -m http.server 8000
 3. **Deadline banner** — dates live in `js/config.js`. After Independence Day,
    set `showDeadlineBanner: false` to sell the pack evergreen.
 
+4. **Analytics** — sign up free at [goatcounter.com](https://www.goatcounter.com)
+   (cookie-free, no consent banner needed), pick a site code like
+   `desimailclub`, and paste it into `goatCounterCode` in `js/config.js`.
+   Your dashboard: `https://YOURCODE.goatcounter.com`. Until then, no
+   analytics script loads at all.
+
 ## Order status workflow (no backend needed)
 
 1. When an order comes in (Stripe emails you), assign it the next number:
@@ -66,12 +76,20 @@ npx serve .        # or: python3 -m http.server 8000
 **Privacy by design:** `orders.js` contains only order numbers and stages —
 never names, emails, or addresses — so it's safe to serve publicly.
 
-## Deploy free
+## Deploy
 
-- **Netlify / Vercel**: drag the folder in, done.
-- **GitHub Pages**: push this repo, enable Pages on `main`.
+**Live now on GitHub Pages**: https://akhaitan.github.io/desi-mail-club/
+— every push to `main` redeploys in about a minute. Updating an order
+status is just an edit + push.
 
-Updating an order status is just an edit + push.
+If you ever want to switch hosts, `netlify.toml` and `vercel.json` are
+already configured (they also add security + caching headers, which GitHub
+Pages can't do): connect the GitHub repo on Netlify/Vercel and it deploys
+with no build step.
+
+**Custom domain later**: point desimailclub.com at Pages in the repo
+settings, then swap the URL prefix in `index.html`, `status.html`,
+`404.html`, `sitemap.xml`, and `robots.txt` (grep for `akhaitan.github.io`).
 
 ## Swapping in commissioned art later
 

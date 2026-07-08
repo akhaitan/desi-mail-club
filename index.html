@@ -5,11 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Desi Mail Club — Azadi Edition · Happy mail for little desi kids</title>
   <meta name="description" content="A personalized India Independence Day activity pack for kids 4–7, delivered by real mail. Crafts, stickers, a mini passport, and a letter from Moru the peacock — with your child's name on it." />
+
+  <!-- Canonical + social cards. If you move to a custom domain (e.g. desimailclub.com),
+       swap the URL prefix here, in status.html, and in sitemap.xml/robots.txt. -->
+  <link rel="canonical" href="https://akhaitan.github.io/desi-mail-club/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Desi Mail Club" />
+  <meta property="og:title" content="Desi Mail Club — Azadi Edition" />
+  <meta property="og:description" content="A personalized India Independence Day activity pack for kids 4–7, delivered by real mail. $19, free US shipping, with a letter from Moru the peacock — with your child's name on it." />
+  <meta property="og:url" content="https://akhaitan.github.io/desi-mail-club/" />
+  <meta property="og:image" content="https://akhaitan.github.io/desi-mail-club/assets/og-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Desi Mail Club — Azadi Edition" />
+  <meta name="twitter:description" content="Happy mail for little desi kids: crafts, stickers, a mini passport, and a personalized letter from Moru the peacock." />
+  <meta name="twitter:image" content="https://akhaitan.github.io/desi-mail-club/assets/og-card.png" />
+  <meta name="theme-color" content="#FFFDF8" />
+
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Baloo+2:wght@600;700&family=Mulish:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Desi Mail Club — Azadi Edition",
+    "description": "A personalized India Independence Day activity pack for kids 4–7, delivered by real mail. Includes a letter from Moru the peacock with your child's name, flag craft, stickers, coloring page, mini India passport, and keepsake bookmark.",
+    "image": "https://akhaitan.github.io/desi-mail-club/assets/og-card.png",
+    "brand": { "@type": "Brand", "name": "Desi Mail Club" },
+    "audience": { "@type": "PeopleAudience", "suggestedMinAge": 4, "suggestedMaxAge": 7 },
+    "offers": {
+      "@type": "Offer",
+      "price": "19.00",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/PreOrder",
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "USD" },
+        "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "US" }
+      }
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -474,5 +516,6 @@
 
   <script src="js/config.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/analytics.js"></script>
 </body>
 </html>

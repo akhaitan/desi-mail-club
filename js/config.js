@@ -28,4 +28,11 @@ window.DMC_CONFIG = {
   showDeadlineBanner: true,
   orderByDate: "August 1",
   holidayDate: "August 15",
+
+  /* 5) ANALYTICS — free, private, no cookies (no consent banner
+        needed). Sign up at https://www.goatcounter.com, pick a
+        site code (e.g. "desimailclub"), and paste it here.
+        Dashboard lives at https://YOURCODE.goatcounter.com.
+        While this is empty, no analytics script loads at all. */
+  goatCounterCode: "",
 };
